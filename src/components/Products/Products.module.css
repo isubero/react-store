@@ -1,0 +1,15 @@
+.productsList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.productCard {
+    margin: 10px;
+    width: 300px;
+}
+
+.productImg {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
