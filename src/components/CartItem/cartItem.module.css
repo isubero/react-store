@@ -1,0 +1,26 @@
+.cartItem {
+    display: flex;
+    font-size: 14px;
+}
+
+.itemImage {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.itemDetails {
+    width: 100%;
+}
+
+.itemName {
+    font-weight: 500;
+}
+
+.priceAndQuantity {
+    font-weight: 100;
+}
+
+.price {
+    margin-left: 5px;
+}

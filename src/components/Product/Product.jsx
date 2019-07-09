@@ -7,7 +7,6 @@ class Product extends Component {
 
     componentDidMount() {
         console.log( this.props.location.state.product );
-        console.log( this.context );
     }
 
     render() {
@@ -21,14 +20,8 @@ class Product extends Component {
                 <button 
                     onClick={ (event) => {this.context.addToCart( this.props.location.state.product )} }
                     >
-                    Add to cart
+                    Añadir al carrito
                 </button>
-                <div>
-                    <h3>Cart</h3>
-                    { this.context.state.items.map(item => ( 
-                        <div key={item.id} className="productCartCard">{item.name} / Cantidad:{item.quantity}</div> 
-                    )) }
-                </div>
             </div>
         );
     }

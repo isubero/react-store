@@ -10,6 +10,11 @@ export class MyProvider extends Component {
     subtotal: 0
   }
 
+  componendDidUpdate() {
+    console.log(this.state);
+  }
+
+  // ADD TO CART
   addToCart = (product) => {
 
     // Check if product is already in the cart
@@ -24,23 +29,41 @@ export class MyProvider extends Component {
             }
         });
 
+        newState.subtotal = this.calculateSubtotal();
         this.setState(newState);
         return;
     }
 
+    // If product is NOT in the cart, add it.
     const formattedProduct = {
         id: product.id,
         name: product.name,
-        price: product.price,
+        price: parseFloat(product.price),
         image: product.images[0].src,
         quantity: 1
     }
 
     const newState = {...this.state};
     newState.items.push(formattedProduct);
+    newState.subtotal = this.calculateSubtotal();
     this.setState(newState);
+  }
 
-    console.log(formattedProduct);
+  // CALCULATE SUBTOTAL
+  calculateSubtotal = () => {
+    let subtotal = 0;
+
+    this.state.items.forEach(item => {
+      subtotal = subtotal + ( item.price * item.quantity );
+    });
+
+    subtotal = this.round(subtotal, 2);
+    return subtotal;
+  }
+
+  // ROUND HELPER
+  round = (value, decimals) => {
+    return Number( Math.round(value+'e'+decimals)+'e-'+decimals );
   }
 
   render() {
