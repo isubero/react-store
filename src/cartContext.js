@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 // Create a context
 export const myContext = React.createContext();
@@ -6,12 +7,29 @@ export const myContext = React.createContext();
 // Create a provider component
 export class MyProvider extends Component {
   state = {
+    storeProducts: [],
     items: [],
     subtotal: 0
   }
 
-  componendDidUpdate() {
-    console.log(this.state);
+  componentDidMount() {
+      // Get products
+      axios({
+        method: 'get',
+        url: 'https://tienda.isaias.io/wp-json/wc/v1/products',
+        auth: {
+            username: process.env.REACT_APP_WOO_PUBLIC,
+            password: process.env.REACT_APP_WOO_SECRET
+        }
+    })
+    .then( response => {
+        console.log('Store products:', response.data);
+        this.setState({
+            storeProducts: response.data
+        });
+
+        console.log(response.data);
+    } );
   }
 
   // ADD TO CART

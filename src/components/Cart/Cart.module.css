@@ -1,6 +1,7 @@
 .cart {
-    background: #eee;
     padding: 20px;
+    background: #315f51;
+    color: #fff;
 }
 
 .itemsList {
