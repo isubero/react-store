@@ -1,0 +1,42 @@
+.productPage {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.imageCol {
+    width: 400px;
+}
+
+.imageCol .productImage {
+    max-width: 100%;
+}
+
+.infoCol {
+    width: 400px;
+    padding: 20px;
+}
+
+.productImage {
+    width: 400px;
+}
+
+.price {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #777;
+}
+
+.currency {
+    font-size: 18px;
+}
+
+.addToCartBtn {
+    display: block;
+    margin: 15px 0;
+    background: #222;
+    color: #fff;
+    padding: 10px;
+    text-transform: uppercase;
+    border: none;
+}

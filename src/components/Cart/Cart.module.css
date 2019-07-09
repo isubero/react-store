@@ -8,3 +8,14 @@
     padding: 0;
     list-style: none;
 }
+
+.payBtn {
+    display: block;
+    margin: 10px 0;
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 8px;
+    width: 100%;
+    text-transform: uppercase;
+}

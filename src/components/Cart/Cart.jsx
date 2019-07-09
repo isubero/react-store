@@ -33,7 +33,7 @@ class Cart extends Component {
                 <div>
                     Subtotal: €{ this.context.state.subtotal }
                 </div>
-                <button>Pagar ahora</button>
+                <button className={classes.payBtn}>Pagar ahora</button>
             </div>
         )
     }
