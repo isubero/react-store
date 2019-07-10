@@ -11,6 +11,23 @@ class Cart extends Component {
         console.log( 'cart context', this.context );
     }
 
+    itemsCount = () => {
+        let count = 0;
+
+        this.context.state.items.forEach(item => {
+            count = count + item.quantity;
+        });
+
+        if ( count === 0 ) {
+            return 'No items';
+        } 
+        else if ( count > 1 ) {
+            return count + ' items en total';
+        }else {
+            return count + ' item';
+        }
+    }
+
     render() {
 
         let cartItems = null;
@@ -25,15 +42,21 @@ class Cart extends Component {
 
         return (
             <div className={classes.cart}>
-                <h3>Carrito</h3>
+                <div className={classes.cartHeader}>
+                <h3 className={classes.cartTitle}>Carrito</h3>
+                <span className={classes.itemsCount}>{ this.itemsCount() }</span>
+                </div>
                 <ul className={classes.itemsList}>
                     { cartItems }
                 </ul>
 
-                <div>
-                    Subtotal: €{ this.context.state.subtotal }
+                <div className={classes.cartFooter}>
+                    <div className={classes.subtotal}>
+                        <div className={classes.subtotalAmount}>€{ this.context.state.subtotal }</div>
+                        <span>Subtotal</span>
+                    </div>
+                    <button className={classes.payBtn}>Pagar ahora</button>
                 </div>
-                <button className={classes.payBtn}>Pagar ahora</button>
             </div>
         )
     }
