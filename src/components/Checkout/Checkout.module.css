@@ -1,0 +1,13 @@
+.formGroup {
+    margin-bottom: 10px;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.formGroup input {
+    padding: 10px;
+    color: #333;
+}

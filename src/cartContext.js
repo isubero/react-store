@@ -67,6 +67,24 @@ export class MyProvider extends Component {
     this.setState(newState);
   }
 
+  // REMOVE FROM CART
+  removeFromCart = (id) => {
+    const updatedItems = this.state.items.filter( item => item.id !== id );
+    let subtotal = 0;
+
+    if (updatedItems.length > 0) {
+      updatedItems.forEach(item => {
+        subtotal = subtotal + ( item.price * item.quantity );
+        subtotal = this.round(subtotal, 2);
+      });
+    }
+
+    this.setState({
+      items: updatedItems,
+      subtotal: subtotal
+    })
+  }
+
   // CALCULATE SUBTOTAL
   calculateSubtotal = () => {
     let subtotal = 0;
@@ -86,7 +104,7 @@ export class MyProvider extends Component {
 
   render() {
     return (
-      <myContext.Provider value={{ state: this.state, addToCart: this.addToCart }}>
+      <myContext.Provider value={{ state: this.state, addToCart: this.addToCart, removeFromCart: this.removeFromCart }}>
         {this.props.children}
       </myContext.Provider>
     )

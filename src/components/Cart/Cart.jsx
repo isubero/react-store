@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { myContext } from '../../cartContext';
 import CartItem from '../CartItem/CartItem';
 import classes from './Cart.module.css';
@@ -55,7 +56,7 @@ class Cart extends Component {
                         <div className={classes.subtotalAmount}>€{ this.context.state.subtotal }</div>
                         <span>Subtotal</span>
                     </div>
-                    <button className={classes.payBtn}>Pagar ahora</button>
+                    <Link to="/checkout" className={classes.payBtn}>Pagar ahora</Link>
                 </div>
             </div>
         )

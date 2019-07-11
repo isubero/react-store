@@ -25,3 +25,14 @@
 .price {
     margin-left: 5px;
 }
+
+.removeBtn {
+    background: none;
+    color: #9E9E9E;
+    border: none;
+    cursor: pointer;
+}
+
+.removeBtn:hover {
+    color: #ff5722;
+}
