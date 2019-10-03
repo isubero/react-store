@@ -1,3 +1,10 @@
+.checkoutForm {
+    width: 600px;
+    padding: 45px;
+    margin: 10px auto 45px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
+}
+
 .formGroup {
     margin-bottom: 10px;
 }
@@ -10,4 +17,25 @@
 .formGroup input {
     padding: 10px;
     color: #333;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.formGroup select {
+    padding: 10px;
+    width: 50%;
+}
+
+.checkoutBtn {
+    display: block;
+    margin: 20px 0;
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 8px;
+    width: 100%;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
 }

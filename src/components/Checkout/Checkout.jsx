@@ -98,9 +98,9 @@ class Checkout extends Component {
     render() {
         return (
             <React.Fragment>
-                <h1>Finalizar compra</h1>
+                <form action="" className={classes.checkoutForm} onSubmit={this.handleSubmit}>
+                    <h1>Finalizar compra</h1>
 
-                <form action="" onSubmit={this.handleSubmit}>
                     <div className={classes.formGroup}>
                         <label htmlFor="first_name">Nombre</label>
                         <input type="text" name="first_name" value={this.state.first_name} onChange={this.handleChange} />
@@ -110,8 +110,16 @@ class Checkout extends Component {
                         <input type="text" name="last_name" value={this.state.last_name} onChange={this.handleChange} />
                     </div>
                     <div className={classes.formGroup}>
+                        <label htmlFor="phone">Teléfono</label>
+                        <input type="text" name="phone" value={this.state.phone} onChange={this.handleChange} />
+                    </div>
+                    <div className={classes.formGroup}>
+                        <label htmlFor="email">Correo electrónico</label>
+                        <input type="text" name="email" value={this.state.email} onChange={this.handleChange} />
+                    </div>
+                    <div className={classes.formGroup}>
                         <label htmlFor="country">País</label>
-                        <select name="country" value={this.state.country} onChange={this.onChange}>
+                        <select name="country" value={this.state.country} onChange={this.handleChange}>
                             <option value="ES">España</option>
                         </select>
                     </div>
@@ -136,15 +144,7 @@ class Checkout extends Component {
                             <option value="O">Asturias</option>
                         </select>
                     </div>
-                    <div className={classes.formGroup}>
-                        <label htmlFor="phone">Teléfono</label>
-                        <input type="text" name="phone" value={this.state.phone} onChange={this.handleChange} />
-                    </div>
-                    <div className={classes.formGroup}>
-                        <label htmlFor="email">Correo electrónico</label>
-                        <input type="text" name="email" value={this.state.email} onChange={this.handleChange} />
-                    </div>
-                    <input type="submit" value="Realizar el pedido" />
+                    <input className={classes.checkoutBtn} type="submit" value="Realizar el pedido" />
                 </form>
             </React.Fragment>
         )

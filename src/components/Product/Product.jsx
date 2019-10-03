@@ -6,10 +6,6 @@ class Product extends Component {
 
     static contextType = myContext;
 
-    componentDidMount() {
-        console.log( this.props.location.state.product );
-    }
-
     render() {
         return (
             <div className={classes.productPage}>
