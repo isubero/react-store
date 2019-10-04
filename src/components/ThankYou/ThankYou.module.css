@@ -1,0 +1,17 @@
+.thankYouPage {
+    max-width: 800px;
+    margin: auto;
+    padding: 30px;
+}
+
+.orderTable {
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.orderTable th,
+.orderTable td {
+    padding: 10px;
+    border: 1px solid #777;
+}
