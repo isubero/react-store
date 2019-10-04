@@ -27,8 +27,6 @@ export class MyProvider extends Component {
         this.setState({
             storeProducts: response.data
         });
-
-        console.log(response.data);
     } );
   }
 

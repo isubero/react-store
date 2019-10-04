@@ -89,6 +89,7 @@ class Checkout extends Component {
         })
         .then( response => {
             console.log(response.data);
+            this.props.history.push('/thank-you', response.data);
         })
         .catch(error => {
             console.log(error);
