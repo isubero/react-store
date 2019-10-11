@@ -1,4 +1,4 @@
-Este es un proyecto demo creado para la [WC Dev Sevilla 2019](https://github.com/facebook/create-react-app).
+Este es un proyecto demo creado para la [WC Dev Sevilla 2019](https://2019-developers.sevilla.wordcamp.org/).
 
 ## Configura tu proyecto.
 
