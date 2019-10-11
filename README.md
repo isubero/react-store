@@ -1,68 +1,25 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este es un proyecto demo creado para la [WC Dev Sevilla 2019](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Configura tu proyecto.
 
-In the project directory, you can run:
+### `Variables de ambiente.`
+
+En la raíz del proyecto crea un fichero llamado .env.development y copia allí las credenciales de la API de WooCommerce de tu sitio. He dejado un ejemplo de como quedaría en el fichero .env-sample incluido en este repositorio.
+
+Recuerda que nunca debes exponer tus llaves de API de WooCommerce (ni ninguna información privada) en el código frontend. En este ejercicio lo hemos hecho así por practicidad, nunca dejes información secreta en variables de ambiente de create-react-app.
 
 ### `npm start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Una vez hayas creado el fichero env.development y hayas colocado las claves correctamente, puedes ejecutar "npm start" en la terminal.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Visita [http://localhost:3000](http://localhost:3000) para verlo en el navegador.
 
-### `npm test`
+## Productos Simples
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Por razón de tiempo, hemos limitado este taller a productos simples y no se han incluido los productos variables. ¡Considera crear los componentes de selectores de variaciones como un buen ejercicio para hacer en casa!
 
-### `npm run build`
+## Contacto
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Puedes hacerme cualquier pregunta a [@Suberovski](https://twitter.com/Suberovski) en Twitter.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+También puedes ponerte en contacto conmigo en [isaiassubero.com](http://isaiassubero.com/).
